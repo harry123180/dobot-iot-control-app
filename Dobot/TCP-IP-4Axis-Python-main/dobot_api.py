@@ -116,6 +116,7 @@ class DobotApi:
             try:
                 self.socket_dobot = socket.socket()
                 self.socket_dobot.connect((self.ip, self.port))
+                self.socket_dobot.settimeout(2)
             except socket.error:
                 print(socket.error)
                 raise Exception(
