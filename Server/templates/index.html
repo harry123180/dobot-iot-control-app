@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobot 機械臂控制面板</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dobot 機械臂控制面板</h1>
+
+        <div class="status-panel">
+            <h2>連線狀態</h2>
+            <div class="status-item">
+                <span>Dashboard (29999):</span>
+                <span id="status-dashboard" class="status-light gray"></span>
+            </div>
+            <div class="status-item">
+                <span>Move (30003):</span>
+                <span id="status-move" class="status-light gray"></span>
+            </div>
+            <div class="status-item">
+                <span>Feed (30004):</span>
+                <span id="status-feed" class="status-light gray"></span>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <h2>基本控制</h2>
+            <div class="buttons">
+                <button id="btn-enable">Enable Robot (使能)</button>
+                <button id="btn-disable">Disable Robot (去使能)</button>
+            </div>
+        </div>
+
+        <div class="message-panel">
+            <h2>訊息</h2>
+            <pre id="message-box">等待操作...</pre>
+        </div>
+    </div>
+
+    <script src="/static/js/control.js"></script>
+</body>
+</html>
